@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre mí | Alina</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="page">
+  <canvas id="stars"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><span>ALINA</span><small>web dev</small></a>
+    <button class="nav-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="nav">
+      <a href="index.html">Inicio</a>
+      <a href="projects.html">Proyectos</a>
+      <a href="about.html" class="active">Sobre mí</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Card centrada -->
+  <main class="container about-center">
+    <section class="about-card">
+      <div class="about-grid">
+        <!-- LADO IZQUIERDO (sin foto) -->
+        <aside class="about-aside">
+          <p class="role">UX/UI</p>
+
+          <div class="pills">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Figma</span>
+            <span class="pill">Oracle</span>
+            <span class="pill">PL/SQL</span>
+            <span class="pill">C#</span>
+            <span class="pill">ASP.NET</span>
+            <span class="pill">SEO</span>
+          </div>
+
+          <div class="social">
+            <a class="social-btn" href="#" aria-label="GitHub" title="GitHub">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">
+            </a>
+            <a class="social-btn" href="#" aria-label="LinkedIn" title="LinkedIn">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="">
+            </a>
+            <a class="social-btn" href="mailto:alinapaolafonseca18@gmail.com" aria-label="Email" title="Email">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="">
+            </a>
+          </div>
+
+          <a class="btn tiny full" href="doc/Desarrollo Alina Fonseca.pdf" download>Descargar CV</a>
+        </aside>
+
+        <!-- LADO DERECHO: texto -->
+        <div class="about-body">
+          <h2 class="page-title">Sobre mí</h2>
+          <p class="lead">
+  Hola, soy Alina Fonseca, desarrolladora web en <b>proceso</b>. 
+  Me enfoco en <b>UX/UI</b>, <b>rendimiento</b> y accesibilidad: diseño interfaces limpias con
+  micro-interacciones elegantes. Prototipo en <b>Figma</b> y lo llevo a producción con
+  HTML, CSS y JS, integrando <b>C# / ASP.NET</b> y <b>Oracle / PL/SQL</b> cuando el proyecto lo requiere.
+</p>
+
+
+          <ul class="bio-list">
+            <li><b>Front-end:</b> HTML semántico, CSS moderno (animaciones, responsive), JavaScript.</li>
+            <li><b>Back-end & BD:</b> C#, ASP.NET MVC, Oracle y PL/SQL.</li>
+            <li><b>Prototipado & Diseño:</b> Figma, sistemas de diseño y handoff claro.</li>
+            <li><b>Calidad:</b> accesibilidad, buenas prácticas de SEO y performance.</li>
+          </ul>
+
+          <div class="cta">
+            <a class="btn" href="projects.html">Ver Proyectos</a>
+            <a class="btn ghost" href="contact.html">Contáctame</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Alina Fonseca — Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

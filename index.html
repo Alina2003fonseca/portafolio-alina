@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alina | Portafolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'/>">
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="page home">
+  <canvas id="stars"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><span>ALINA</span><small>web dev</small></a>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="nav">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="projects.html">Proyectos</a>
+      <a href="about.html">Sobre mí</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Planetas CSS -->
+  <div class="planet p1" data-depth="0.1"></div>
+  <div class="planet p2" data-depth="0.25"></div>
+  <div class="planet p3" data-depth="0.18"></div>
+  <div class="ring"></div>
+
+  <main class="hero">
+  <h1 class="glow">Bienvenidos a mi Portafolio</h1>
+
+  <p class="subtitle slogan">
+    Si puedes imaginarlo, <span>puedes programarlo</span>.
+  </p>
+
+  <div class="cta">
+    <a class="btn" href="projects.html">Ver Proyectos</a>
+    <a class="btn ghost" href="contact.html">Contáctame</a>
+  </div>
+</main>
+
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Alina Fonseca — Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
