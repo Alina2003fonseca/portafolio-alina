@@ -1,4 +1,4 @@
-/* ===== Config ===== */
+
 const CONFIG = {
   PLANETS_MIN: 8,
   PLANETS_MAX: 12,
@@ -8,7 +8,7 @@ const CONFIG = {
   PARALLAX: 18       // px de desplazamiento por profundidad
 };
 
-/* ===== Año en footer ===== */
+
 const YEAR_SPAN = document.getElementById('year');
 if (YEAR_SPAN) YEAR_SPAN.textContent = new Date().getFullYear();
 
@@ -22,7 +22,7 @@ if (navBtn && nav) {
   });
 }
 
-/* ===== FONDO ESTRELLAS (canvas) ===== */
+
 (function starsBG(){
   const canvas = document.getElementById('stars');
   if (!canvas) return;
@@ -46,7 +46,7 @@ if (navBtn && nav) {
   function tick(){
     ctx.clearRect(0,0,w,h);
 
-    // Nebulosas suaves
+   
     const g1 = ctx.createRadialGradient(w*0.15, h*0.05, 0, w*0.15, h*0.05, Math.max(w,h)*0.6);
     g1.addColorStop(0, 'rgba(0,255,179,0.05)'); g1.addColorStop(1, 'rgba(0,0,0,0)');
     ctx.fillStyle = g1; ctx.fillRect(0,0,w,h);
@@ -55,7 +55,6 @@ if (navBtn && nav) {
     g2.addColorStop(0, 'rgba(124,249,255,0.04)'); g2.addColorStop(1, 'rgba(0,0,0,0)');
     ctx.fillStyle = g2; ctx.fillRect(0,0,w,h);
 
-    // Estrellas
     for (const s of stars){
       s.y += s.vy * s.z;
       s.x += s.vx * s.z;
@@ -77,7 +76,7 @@ if (navBtn && nav) {
   tick();
 })();
 
-/* ===== PLANETAS DINÁMICOS EN TODAS LAS PÁGINAS ===== */
+
 (function planets(){
   const count = Math.floor(Math.random()*(CONFIG.PLANETS_MAX - CONFIG.PLANETS_MIN + 1)) + CONFIG.PLANETS_MIN;
   const W = () => window.innerWidth, H = () => window.innerHeight;
@@ -86,7 +85,7 @@ if (navBtn && nav) {
 
   function rand(a,b){ return Math.random()*(b-a)+a; }
   function hsv(h,s,v){
-    // convierte HSV->RGB (rápido) y devuelve css rgb()
+    
     let f=(n,k=(n+h/60)%6)=>v-v*s*Math.max(Math.min(k,4-k,1),0);
     const r = Math.round(f(5)*255), g = Math.round(f(3)*255), b = Math.round(f(1)*255);
     return `rgb(${r},${g},${b})`;
@@ -171,7 +170,7 @@ if (navBtn && nav) {
   });
 })();
 
-/* ===== Glow reactivo en tarjetas/botones ===== */
+
 (function reactiveGlow(){
   const cards = document.querySelectorAll('.card');
   document.querySelectorAll('.site-nav a, .btn').forEach(el=>{

@@ -12,7 +12,6 @@
   --shadow:0 10px 40px rgba(0,0,0,.4), 0 0 80px #00ffb31a;
 }
 
-/* ============ Base & Fondo ============ */
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -28,7 +27,6 @@ body{
 .page canvas#stars{position:fixed; inset:0; z-index:-2}
 .page .planet{position:fixed; z-index:-1}
 
-/* ============ Footer siempre abajo ============ */
 body.page{
   min-height:100dvh;
   display:flex;
@@ -37,7 +35,7 @@ body.page{
 main.container{flex:1 0 auto;}
 .site-footer{margin-top:auto;}
 
-/* ============ Header ============ */
+
 .site-header{
   position:sticky; top:0; z-index:10;
   display:flex; align-items:center; justify-content:space-between;
@@ -65,7 +63,6 @@ main.container{flex:1 0 auto;}
 .site-nav a:hover::before{opacity:.9}
 .site-nav a.active{border-color:var(--primary); box-shadow:0 0 0 1px var(--primary) inset}
 
-/* ============ Menú móvil ============ */
 .nav-toggle{display:none; width:42px; height:34px; background:transparent; border:0; position:relative}
 .nav-toggle span{position:absolute; left:6px; right:6px; height:2px; background:#bffcf0; border-radius:2px; transition:.3s}
 .nav-toggle span:nth-child(1){top:9px}
@@ -82,7 +79,7 @@ main.container{flex:1 0 auto;}
   .site-nav.open{opacity:1; pointer-events:auto; transform:translateY(0)}
 }
 
-/* ============ Hero ============ */
+
 .hero{
   min-height:calc(100dvh - 78px);
   display:grid; place-content:center; text-align:center; padding:48px 16px; gap:16px;
@@ -96,7 +93,7 @@ main.container{flex:1 0 auto;}
 .subtitle span{color:var(--accent)}
 .cta{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:8px}
 
-/* Slogan opcional (si lo usás en index) */
+
 .slogan{
   max-width: 780px;
   margin: 0 auto;
@@ -124,7 +121,6 @@ main.container{flex:1 0 auto;}
   100%{transform: translateX(60%)  scaleX(.8); opacity:.35; }
 }
 
-/* ============ Botones ============ */
 .btn{
   display:inline-block; padding:12px 20px; border-radius:999px; text-decoration:none;
   border:1px solid var(--primary); color:var(--bg);
@@ -135,7 +131,6 @@ main.container{flex:1 0 auto;}
 .btn.ghost{background:transparent; color:var(--text); border-color:var(--primary); box-shadow:none}
 .btn.tiny{padding:8px 14px; font-size:14px}
 
-/* ============ Planetas dinámicos (JS) ============ */
 .planet{
   position: fixed;
   border-radius: 50%;
@@ -155,7 +150,7 @@ main.container{flex:1 0 auto;}
 @keyframes float{ 0%,100%{transform:translateY(-6px)} 50%{transform:translateY(6px)} }
 @keyframes ring-spin{to{transform:skewY(16deg) rotate(352deg)}}
 
-/* ============ Contenido interior ============ */
+
 .container{max-width:1100px; margin:0 auto; padding:64px 16px}
 .container.narrow{max-width:860px}
 .page-title{font-size:clamp(28px,5vw,44px); margin:20px 0 28px}
@@ -183,7 +178,7 @@ main.container{flex:1 0 auto;}
   filter: blur(18px); opacity:.5; pointer-events:none;
 }
 
-/* Miniatura en la tarjeta (16:9) */
+
 .card .thumb{
   width:100%;
   aspect-ratio:16/9;
@@ -209,14 +204,12 @@ main.container{flex:1 0 auto;}
 }
 .card:hover .thumb::after{ opacity:1; }
 
-/* ============ Habilidades ============ */
 .skills{display:grid; gap:14px}
 .skill{display:grid; gap:6px}
 .skill span{font-weight:600}
 .bar{background:#0a1126; border:1px solid #1b2547; border-radius:12px; height:12px; overflow:hidden}
 .bar i{display:block; height:100%; background:linear-gradient(90deg,#00ffb3,#7cf9ff); box-shadow:0 0 16px #00ffb366}
 
-/* ============ Formularios (Contacto) ============ */
 .form{max-width:720px; margin:auto; display:grid; gap:14px}
 .field{display:grid; gap:6px}
 input, textarea{
@@ -225,13 +218,13 @@ input, textarea{
 }
 input:focus, textarea:focus{border-color:#00ffb399; box-shadow:0 0 0 4px #00ffb31f}
 
-/* ============ Footer ============ */
+
 .site-footer{
   padding:28px 16px; text-align:center; color:#97c5bb;
   border-top:1px solid #102043;
   background:linear-gradient(0deg,#070a12cc, #070a1200);
 }
-/* ====== Fila horizontal con scroll (tipo carrusel) ====== */
+
 .grid.horizontal{
   display:flex;
   gap:22px;
@@ -245,7 +238,7 @@ input:focus, textarea:focus{border-color:#00ffb399; box-shadow:0 0 0 4px #00ffb3
   scroll-snap-align:start;
 }
 
-/* Scrollbar (suave) */
+
 .grid.horizontal::-webkit-scrollbar{ height:8px }
 .grid.horizontal::-webkit-scrollbar-track{ background:transparent }
 .grid.horizontal::-webkit-scrollbar-thumb{
@@ -253,7 +246,7 @@ input:focus, textarea:focus{border-color:#00ffb399; box-shadow:0 0 0 4px #00ffb3
 }
 .grid.horizontal:hover::-webkit-scrollbar-thumb{ background:#155242 }
 
-/* ====== Miniatura con overlay ====== */
+
 .card .thumb{
   width:100%;
   aspect-ratio:16/9;
@@ -280,7 +273,7 @@ input:focus, textarea:focus{border-color:#00ffb399; box-shadow:0 0 0 4px #00ffb3
 }
 .card:hover .thumb-overlay{ opacity:1; }
 
-/* Chips (Demo / Repo) sobre la foto */
+
 .chip{
   padding:8px 12px; border-radius:999px; text-decoration:none;
   border:1px solid var(--primary); color:var(--bg);
@@ -300,7 +293,7 @@ input:focus, textarea:focus{border-color:#00ffb399; box-shadow:0 0 0 4px #00ffb3
 /* ======= ABOUT centrado, glass y responsive ======= */
 .about-center{
   display:grid; place-items:center;
-  min-height:calc(100dvh - 120px); /* centra sin pegarse al footer */
+  min-height:calc(100dvh - 120px); 
   padding-top:12px;
 }
 
@@ -398,7 +391,7 @@ input:focus, textarea:focus{border-color:#00ffb399; box-shadow:0 0 0 4px #00ffb3
   .avatar-wrap{ width:100px; height:100px }
   .avatar-lg{ width:100px; height:100px }
 }
-/* ===== Contacto: diseño de tarjetas ===== */
+
 .contact-center{ display:grid; place-items:center; }
 .contact-grid{
   display:grid;
@@ -424,7 +417,7 @@ input:focus, textarea:focus{border-color:#00ffb399; box-shadow:0 0 0 4px #00ffb3
 .muted{ color:var(--muted) }
 .contact-social{ justify-content:flex-start }
 
-/* Botón flotante de WhatsApp */
+
 .wa-float{
   position:fixed; right:18px; bottom:18px; z-index:20;
   width:54px; height:54px; display:grid; place-items:center;
@@ -436,16 +429,16 @@ input:focus, textarea:focus{border-color:#00ffb399; box-shadow:0 0 0 4px #00ffb3
 .wa-float:hover{ transform:translateY(-2px) scale(1.04); box-shadow:0 14px 36px #00ffb36a, 0 0 28px #00ffb355 inset }
 .wa-float svg{ width:26px; height:26px; fill:#04251b }
 
-/* Ajustes responsivos */
+
 @media (max-width:700px){
   .contact-grid{ grid-template-columns:1fr; }
 }
-/* ===== WhatsApp flotante (logo oficial) ===== */
+
 .wa-float{
   position:fixed; right:18px; bottom:18px; z-index:20;
   width:64px; height:64px; display:grid; place-items:center;
   border-radius:50%;
-  /* sin fondo: dejamos que se vea el logo original */
+ 
   transition:transform .18s ease, filter .18s ease;
 }
 .wa-ico-img{
@@ -459,12 +452,12 @@ input:focus, textarea:focus{border-color:#00ffb399; box-shadow:0 0 0 4px #00ffb3
   outline:none;
 }
 
-/* Tooltip “¡Converse conmigo!” (anclado al ancho real del botón) */
+
 .wa-tip{
   position: absolute;
-  right: calc(100% + 12px);       /* coloca el tooltip a la izquierda del botón */
+  right: calc(100% + 12px);       
   bottom: 50%;
-  transform: translateY(50%) translateX(6px);  /* pequeño offset inicial para animación */
+  transform: translateY(50%) translateX(6px);  
   white-space: nowrap;
   max-width: clamp(160px, 30vw, 260px);
   background:#0b1124; color:var(--text);
@@ -477,11 +470,11 @@ input:focus, textarea:focus{border-color:#00ffb399; box-shadow:0 0 0 4px #00ffb3
 .wa-float::after{
   content:"";
   position:absolute;
-  right: calc(100% + 4px);        /* triangulito pegado al botón */
+  right: calc(100% + 4px);      
   bottom: 50%;
   transform: translateY(50%);
   border:8px solid transparent;
-  border-left-color:#0b1124;      /* flecha apuntando hacia el botón */
+  border-left-color:#0b1124;     
   filter:drop-shadow(-1px 0 0 #1b2547);
   opacity:0; transition: opacity .18s ease;
 }
@@ -497,15 +490,15 @@ input:focus, textarea:focus{border-color:#00ffb399; box-shadow:0 0 0 4px #00ffb3
   opacity:1;
 }
 
-/* En móviles (sin hover) lo ocultamos */
+
 @media (hover:none){
   .wa-tip, .wa-float::after{ display:none }
 }
-/* WhatsApp flotante (más hacia adentro) */
+
 .wa-float{
   position: fixed;
-  right: clamp(36px, 4vw, 72px);   /* separa del borde derecho */
-  bottom: clamp(36px, 6vh, 96px);  /* separa del borde inferior */
+  right: clamp(36px, 4vw, 72px);  
+  bottom: clamp(36px, 6vh, 96px);  
   z-index: 20;
   width: 64px; height: 64px;
   display: grid; place-items: center;

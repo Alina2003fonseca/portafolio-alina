@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <!-- Neon sphere gradient -->
+    <radialGradient id="ball" cx="38%" cy="32%" r="62%">
+      <stop offset="0%"  stop-color="#cafff4"/>
+      <stop offset="35%" stop-color="#7fffe0"/>
+      <stop offset="65%" stop-color="#00ffb3"/>
+      <stop offset="100%" stop-color="#006350"/>
+    </radialGradient>
+
+    <!-- Soft glow -->
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle shadow -->
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#00281f" flood-opacity="0.55"/>
+    </filter>
+
+    <!-- Ring glow -->
+    <filter id="ringGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="g"/>
+      <feMerge>
+        <feMergeNode in="g"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sphere -->
+  <g filter="url(#shadow)">
+    <circle cx="256" cy="256" r="160" fill="url(#ball)" filter="url(#glow)"/>
+  </g>
+
+  <!-- Highlight dot -->
+  <circle cx="322" cy="180" r="44" fill="#ffffff" opacity="0.35"/>
+
+  <!-- Ring (outline + inner stroke for depth) -->
+  <g transform="rotate(-6 256 320)">
+    <!-- Outer glow stroke -->
+    <ellipse cx="256" cy="320" rx="195" ry="72"
+             fill="none" stroke="#61eff7" stroke-width="30" opacity="0.55"
+             filter="url(#ringGlow)"/>
+    <!-- Main ring stroke -->
+    <ellipse cx="256" cy="320" rx="190" ry="68"
+             fill="none" stroke="#9cfaff" stroke-width="24" opacity="0.95"/>
+  </g>
+</svg>
